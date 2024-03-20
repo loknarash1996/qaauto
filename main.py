@@ -8,7 +8,7 @@ value=["Да", "Конечно", "Нет", "Отнюдь", "Естественн
 try:
     browser = webdriver.Chrome()
     browser.get("http://suninjuly.github.io/find_xpath_form")
-    elements = browser.find_elements(By.CSS_SELECTOR,'input[type="text.txt"]')
+    elements = browser.find_elements(By.CLASS_NAME,'input[type="text.txt"]')
     print(elements)
     for element in elements:
         element.send_keys(random.choice(value))
